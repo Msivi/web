@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=My+Soul&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Font-Awesomecss/css/font-awesome.min.css">
+    <title>VTSTORE.COM</title>
+    <style>
+        *{
+            margin: 0 ;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            margin: auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 120px 50px 440px 0px 8900px 50px 250px ;
+            grid-gap: 0px;
+            grid-template-areas: 
+            "head"
+            "left"
+            "left_ct"
+            "content"
+            "sanpham"
+            "right"
+            "footer"
+            
+        }
+        .container{
+                padding: 0 ;
+                margin: 0 ;
+                width:100%;
+            }
+        
+          
+
+
+        .container .head{
+            grid-area: head;
+            height: auto;
+            width: 100% !important;
+            margin: 0px;
+            background-color: aliceblue;
+            
+           
+        }
+        
+        .container.head-fluid{
+          margin: 0;
+          padding: 0;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .topnav {
+            overflow: hidden;
+            background-color: #e9e9e9; 
+            background-image: linear-gradient(to right, white, red,red , white);
+            padding: 10px;
+            width: auto;
+
+
+        }
+        .topnav .danhsach .logo a{
+            font-size: 30px;
+            color: #897107;
+            font-family: 'Lobster', cursive;
+        }
+        
+        .topnav a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 4px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+         .topnav .danhsach .fa-shopping-cart{
+             font-size: 30px;
+         }
+         .topnav .danhsach .dn{
+             display: none;
+         }
+         .topnav .danhsach .dk{
+             display: none;
+         }
+         .topnav .danhsach .gh{
+             display: none;
+         }
+        .topnav .search-container {
+            float: right;
+       
+        }
+        
+        .topnav input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: none;
+        }
+        
+        .topnav .search-container button {
+            float: right;
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .topnav .search-container button:hover {
+        background: #ccc;
+        }
+        .topnav #toggle{
+            float: left;
+            cursor: pointer;
+        }
+        .topnav #toggle i{
+            text-align: end;
+        }
+        .topnav h5{
+            display: none;
+        }
+        .topnav .danhsach{
+            display: flex;
+            float: left;
+            list-style: none;
+            justify-content: space-between;
+        }
+        .topnav .danhsach button{
+            position: relative;
+        
+            height: 30px;
+            width: 30px;
+            
+        }
+        
+        .container .head .danhsach .media {
+            display: none;
+        }
+        .container .head .danhsach .dangnhap span{
+            display: none;
+        }
+        .container .head .danhsach #dangky{
+            display: none;
+        }
+        .container .head .danhsach #giohang{
+            display: none;
+        }
+        .container .head .danhsach .dangnhap i{
+            position: relative;
+            top: 10px;
+        }
+        .container .head .danhsach .dangnhap i{
+            font-size: 27px;
+            color: #F5F6FA;
+            justify-content: left;
+        }
+        .container .head .danhsach .dangnhap:hover i{
+                color: #bda22c;
+        }
+
+        /*============ head============================================================================= */
+        .container .left{
+            grid-area: left;
+            height: auto;
+            background-color: aliceblue;
+            display: none;
+        }
+        .container .left div:hover{
+            background-color: rgb(7, 78, 145);
+        }
+        .container .left div{
+            background-color: aqua;
+            margin: 3px;
+        }
+        .container .left a{
+            text-decoration: none;
+            color: aliceblue;
+            padding: 3px;
+        }
+        /* ===========left ====================================================================== */
+        .container .left_ct{
+            grid-area: left_ct;
+            padding: 2px;
+           justify-items: left;
+        }
+       
+      .container .left_ct {
+            position: absolute;
+            grid-area: left_ct;
+            top: -134px; 
+            margin-left: -5px;
+            Display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            display: block;
+            height: 100%;
+        }
+        .left_ct{
+            border-radius: 10px;
+        }
+
+        .left_ct .menu {
+        
+            width: 100%;
+            height: 91%;
+        
+            overflow: hidden;
+        }
+
+
+
+        #menuToggle {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            top: 25px;
+            left: 25px;
+            z-index: 1;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        #menuToggle input
+        {
+            display: flex;
+            width: 40px;
+            height: 32px;
+            position: absolute;
+            cursor: pointer;
+            opacity: 0;
+            z-index: 2;
+        }
+
+        #menuToggle span
+        {
+            display: flex;
+            width: 29px;
+            height: 2px;
+            margin-bottom: 5px;
+            position: relative;
+            background: black;
+            border-radius: 3px;
+            z-index: 1;
+            transform-origin: 5px 0px;
+            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+            background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    opacity 0.55s ease;
+        }
+
+        #menuToggle span:first-child
+        {
+            transform-origin: 0% 0%;
+        }
+
+        #menuToggle span:nth-last-child(2)
+        {
+            transform-origin: 0% 100%;
+        }
+
+        #menuToggle input:checked ~ span
+        {
+            opacity: 1;
+            transform: rotate(45deg) translate(-3px, -1px);
+            background: #36383F;
+        }
+        #menuToggle input:checked ~ span:nth-last-child(3)
+        {
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+        }
+
+        #menuToggle input:checked ~ span:nth-last-child(2)
+        {
+            transform: rotate(-45deg) translate(0, -1px);
+        }
+
+        #menu
+        {
+            position: absolute;
+            width: 300px;
+            height: 400px;
+            box-shadow: 0 0 10px #85888C;
+            margin: -50px 0 0 -50px;
+            padding: 50px;
+            padding-top: 125px;
+            background-color: #F5F6FA;
+            -webkit-font-smoothing: antialiased;
+            transform-origin: 0% 0%;
+            transform: translate(-100%, 0);
+            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+            list-style: none;
+            border-radius: 10px;
+        }
+
+        #menu li
+        {
+            padding: 10px 0;
+            transition-delay: 2s;
+        
+        }
+
+        #menu li:hover a
+        {
+            color: red;
+        
+        }
+        .content nav ul li a{
+            text-decoration: none;
+            color: black;
+        }
+        #menuToggle input:checked ~ ul
+        {
+            transform: none;
+        }
+        /* ===========left_ct======================================================================= */
+        .container .content{
+            width:100%;
+            grid-area: content;
+            padding: 0px;
+            position: absolute;
+            top: 133px;
+            margin: 0;
+        }
+
+        /* ============content======================================================================== */
+        .container .sanpham{
+            width:100%;
+            position: relative;
+            grid-area: sanpham;
+            padding: 0px;
+            margin: 2px;
+            top: -127px;
+        }
+        .container .sanpham [class="row mt-5"]{
+            position: absolute;
+            
+        }
+        .card-product{
+                width: 100%;
+                margin-left: 2px;
+                margin-right: 2px;
+                overflow: hidden;
+                position: relative;
+            }
+            .product-title{
+                margin-bottom: 0.25rem;
+            }
+            .product-price{
+                position: relative;
+            }
+            .del-price{
+                text-decoration: line-through;
+            }
+            .new-price{
+                color: #f90;
+                position: absolute;
+              
+                right: 0.8rem;
+            }
+            .btn-add-to-cart:hover{
+               background-color: #f90;
+            }
+            .btn-add-to-cart{
+              
+                color: white!important;
+            }
+            .btn-detail:hover{
+                color: white !important;
+            }
+            .Sale-sticky{
+                color: white;
+                background-color: #f90;
+                display: block;
+                text-align: center;
+                width: 120px;
+                position: absolute;
+                top: 10px;
+                right: -30px;
+                transform: rotate(45deg);
+
+            }
+            .sanpham .giamgia{
+                position:relative;
+                top: -50px;
+                border: 1px solid yellow;
+                border-radius: 10px;
+                background-color: #fed100;
+                padding: 10px ; 
+
+            }
+            .sanpham .giamgia h3:hover{
+                color: red;
+            }
+            .sanpham .giamgia .col-12:hover .mb-3{
+               background-color: #d1d2d5;
+
+            }
+            .product-group .col-12:hover .mb-3{
+                background-color: #d1d2d5;
+            }
+/* ==============sanpham======================================================================= */
+        
+        .container .right{
+            grid-area: right;
+          
+            
+        }
+        .right #link
+        {
+            text-align: center;
+          
+            display: flex;
+        
+        }
+        .right #link div{
+            border: 1px solid white;
+            border-radius: 50%; ;
+            margin: 10px 10px 10px 10px;
+            padding: auto;
+            width: 40px;
+            height: 40px;
+            background-color: #ccc;
+              
+        }
+        .right #link a{
+            color: #ddd;
+        }
+        .right #link .fb a{
+            
+            position: relative;
+            top: 8px;
+        }
+        .right #link .dt a{
+            
+            position: relative;
+            top: 8px;
+        }
+        .right #link .fb{
+            background-color: rgb(49, 110, 251);
+            
+        }
+        .right #link .dt{
+            background-color: red;
+        
+        }
+        .right #link .zl{
+            background-color: rgb(79, 126, 234);
+        }
+/* =================right========================================================================= */
+        .container .footer{
+            grid-area: footer;
+            width: 100% !important;
+            background-color: #85888C;
+            background-image: linear-gradient(to right, white, #85888C,#85888C , white);
+            color: aliceblue;
+            text-align: center;
+            margin: 0;
+            
+        } 
+        .footer .ft div{
+                margin: 5px;
+            }
+            .footer .ft .ten{
+                font-family: 'Lobster', cursive;
+                
+                font-size: 30px;
+                
+            }
+            .footer .ft a{
+                color: #bda22c;
+                text-decoration: none;
+                
+            }
+            .footer .info{
+               
+              
+               background-image: linear-gradient(to right, white, rgb(73, 72, 72),rgb(73, 72, 72) , white);
+           }
+           .footer .info .lienhe{
+               display: none;
+           }
+           .footer .info i{
+               justify-content: center;
+               font-size: 25px;
+               margin: 10px;
+           }
+           .footer .info a{
+               text-align: center;
+               text-decoration: none;
+               color: #e9e9e9;
+           }
+/*====================footer=======================================================================  */
+/* -============================================ */
+        
+            .zl{
+                position: relative;
+                margin: 0px 30px 0px 30px;
+                position: sticky;
+                top:450px;
+                z-index: 1;
+                
+            }
+            .zl a{
+                position: absolute;
+               top: 30px;
+               left: 95%;
+                width: 43px;
+                height: 43px;
+             
+                font-size: 30px;
+                text-align: center;
+                padding: 4px;
+                border-radius: 50px;
+                
+               
+            }
+            .zl i{
+                color: white;
+            }
+            .fb{
+                position: relative;
+                margin: 0px 30px 0px 30px;
+                position: sticky;
+                top:570px;
+                z-index: 1;
+                
+            }
+            .fb a{
+                position: absolute;
+               top: 30px;
+               left: 95%;
+                width: 50px;
+                height: 50px;
+                border: 1px solid grey;
+                font-size: 30px;
+                text-align: center;
+                padding: 4px;
+                border-radius: 50px;
+                background-color: rgb(52, 52, 243);
+            }
+            .fb i{
+                color: white;
+            }
+
+            .dt{
+                position: relative;
+                margin: 0px 30px 0px 30px;
+                position: sticky;
+                top:510px;
+                z-index: 1;
+                
+            }
+            .dt a{
+                position: absolute;
+               top: 30px;
+               left: 95%;
+                width: 45px;
+                height: 45px;
+                border: 1px solid red;
+                font-size: 25px;
+                text-align: center;
+                padding: 4px;
+                border-radius: 50px;
+               background-color: red;
+            }
+            .dt i{
+                color: white;
+            }
+
+/* ===================footer======================================================================= */
+        @media screen and (min-width:768px) {
+            
+            .container{
+                margin: auto;
+                width: 100% ;
+                display: grid;
+                grid-template-columns:0.5fr 1.2fr 3.7fr 0.5fr;
+                grid-template-rows: 80px 350px 1900px 260px ;
+                grid-gap: 2px;
+                grid-template-areas: 
+                "head head head head"
+                "left left_ct content right"
+                "left sanpham sanpham right"   
+                "footer footer footer footer"
+            }
+           
+            
+            .container .head{
+                position: relative;
+                margin: 0px;
+                padding: 0px;
+                /* position: sticky; */
+                top: 0px;
+                z-index: 1;
+                
+            }
+           
+            .head .topnav{
+                justify-content: center;
+            }
+            .container .head .danhsach a{
+               position: relative;
+               top: 10px;
+            }
+
+           
+           
+           
+            .container .head .danhsach #giohang{
+                display: block;
+               
+            }
+            .container .head .danhsach .hotline {
+                display: block;
+                position: relative;
+                height: 50px;
+                width: auto;
+              
+                padding: 5px;
+                margin: 5px;
+            
+            }
+            .container .head .danhsach .d-block{
+                position: absolute;
+               padding: 15px;
+              top: 15px;
+            }
+           
+            .container .head .danhsach .d-none
+            {
+                display: block;
+               position: relative;
+              
+               border-radius: 10px;
+               height: 60px;
+               top: 18px;
+               padding: 5px;
+               margin: 5px;
+            }
+            
+            .container .head .danhsach .dangnhap {
+                position: relative;
+                top: 10px;
+                height: 55px;
+                
+            }
+            .container .head .danhsach .dangnhap i{
+                position: relative;
+                top: 0px;
+                font-size: 27px;
+                color: #F5F6FA;
+                justify-content: left;
+            }
+        
+            .container .head .danhsach .dangnhap span{
+                display: block;
+            }
+           
+            .container .head .danhsach .dangnhap:hover i{
+                color: #bda22c;
+            }
+            .container .head .danhsach .dangnhap:hover span{
+                color:#F5F6FA;
+            }
+            .d-none1:hover a{
+                color: #F5F6FA;
+            }
+          
+        /*============ head============================================================================= */
+            /* .toggle i{
+                display: none;
+
+            } */
+        /* ===========left ============================================================================= */
+            .container .left_ct{
+              position: relative;
+             
+            }
+   
+
+
+            .left_ct {
+                z-index: 3 !important;
+                position: fixed;
+                bottom: 0;
+                border-radius: 10px;
+                position: absolute;
+                margin-top: 163px;
+                margin-right: 280px; 
+                Display: flex;
+                justify-content: center;
+                align-items: center;
+                display: block;
+                overflow: hidden; 
+                height: 100%;
+                width: 100%;
+            
+            }
+
+
+
+            #menuToggle {
+            
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                top: 25px;
+                left: 25px;
+                
+                -webkit-user-select: none;
+                user-select: none;
+                
+            }
+
+            #menuToggle input
+            {
+                display: flex;
+                width: 40px;
+                height: 32px;
+                position: absolute;
+                cursor: pointer;
+                opacity: 0;
+                z-index: 2;
+            }
+
+            #menuToggle span
+            {
+                display: flex;
+                width: 29px;
+                height: 2px;
+                margin-bottom: 5px;
+                position: relative;
+                background: black;
+                border-radius: 3px;
+                transform-origin: 5px 0px;
+                transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    opacity 0.55s ease;
+            }
+
+            #menuToggle span:first-child
+            {
+                transform-origin: 0% 0%;
+            }
+
+            #menuToggle span:nth-last-child(2)
+            {
+                transform-origin: 0% 100%;
+            }
+
+            #menuToggle input:checked ~ span
+            {
+                
+                opacity: 1;
+                transform: rotate(45deg) translate(-3px, -1px);
+                background: #36383F;
+            }
+            #menuToggle input:checked ~ span:nth-last-child(3)
+            {
+                
+                opacity: 0;
+                transform: rotate(0deg) scale(0.2, 0.2);
+            }
+
+            #menuToggle input:checked ~ span:nth-last-child(2)
+            {
+                
+                transform: rotate(-45deg) translate(0, -1px);
+            }
+
+            #menu{
+                position: absolute;
+                width: 300px;
+                height: 400px;
+                box-shadow: 0 0 10px #85888C;
+                margin: -50px 0 0 -50px;
+                padding: 50px;
+                padding-top: 125px;
+                background-color: #F5F6FA;
+                -webkit-font-smoothing: antialiased;
+                transform-origin: 0% 0%;
+                transform: translate(-100%, 0);
+                transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+                list-style: none;
+            }
+
+            #menu li
+            {
+                
+                padding: 10px 0;
+                transition-delay: 2s;
+            }
+            #menu li:hover a
+            {
+                color: red;
+            
+            }
+            .content nav ul li a{
+                
+                text-decoration: none;
+                color: black;
+            }
+            #menuToggle input:checked ~ ul
+            {
+                transform: none;
+            }
+            /* ===========left_ct=========================================================================== */
+            .container .content{
+              
+                display: block;
+                position: relative;
+                padding: 0;
+                margin: 0px;
+                top: 24px;
+              
+
+            }
+            /* ============content========================================================================== */
+            .container .sanpham{
+              
+                position: relative;
+                top: 25px;
+            }
+
+            .card-product{
+                width: 100%;
+                margin-left: 2px;
+                margin-right: 2px;
+                overflow: hidden;
+                position: relative;
+            }
+            .product-title{
+                margin-bottom: 0.25rem;
+            }
+            .product-price{
+                position: relative;
+            }
+            .del-price{
+                text-decoration: line-through;
+            }
+            .new-price{
+                color: #f90;
+                position: absolute;
+              
+                right: 0.8rem;
+            }
+            .btn-add-to-cart:hover{
+               background-color: #f90;
+            }
+            .btn-add-to-cart{
+             
+                color: white!important;
+            }
+            .btn-detail:hover{
+                color: white !important;
+            }
+            .Sale-sticky{
+                color: white;
+                background-color: #f90;
+                display: block;
+                text-align: center;
+                width: 120px;
+                position: absolute;
+                top: 16px;
+                right: -30px;
+                transform: rotate(45deg);
+
+            }
+            .sanpham .giamgia{
+                position:relative;
+                top: -50px;
+                border: 1px solid yellow;
+                border-radius: 10px;
+                background-color: #fed100;
+                padding: 10px ; 
+
+            }
+            .sanpham .giamgia h3:hover{
+                color: red;
+            }
+            .sanpham .giamgia .col-12:hover .mb-3{
+               background-color: #d1d2d5;
+
+            }
+            .product-group .col-12:hover .mb-3{
+                background-color: #d1d2d5;
+            }
+            /* ==============sanpham======================================================================== */
+            .right {
+               
+                display: block;
+            }
+            
+            /* =================right======================================================================= */
+            .footer{
+                display: block;
+                
+                
+            }
+          
+            .footer .ft div{
+                margin: 5px;
+            }
+            .footer .ft .ten{
+                font-family: 'Lobster', cursive;
+                
+                font-size: 30px;
+                
+            }
+            .footer .ft a{
+                color: #bda22c;
+                text-decoration: none;
+                
+            }
+            .footer .info{
+               
+             
+                background-image: linear-gradient(to right, white, rgb(73, 72, 72),rgb(73, 72, 72) , white);
+            }
+            .footer .info .lienhe{
+                display: block;
+                font-size: 20px;
+            }
+            .footer .info i{
+                justify-content: center;
+                font-size: 25px;
+                margin: 10px;
+            }
+            .footer .info a{
+                text-align: center;
+                text-decoration: none;
+                color: #e9e9e9;
+            }
+
+            /* ===================footer==================================================================== */
+           
+          
+            
+
+            /* ====================icon====================================================================== */
+            .zl{
+                position: relative;
+                margin: 0px 30px 0px 30px;
+                position: sticky;
+                top:510px;
+               
+            }
+            .zl a{
+                position: absolute;
+                top: 30px;
+                left: 95%;
+                width: 43px;
+                height: 43px;
+                font-size: 30px;
+                text-align: center;
+                padding: 4px;
+                border-radius: 50px;
+               
+            }
+            .zl i{
+                color: white;
+            }
+            .fb{
+                position: relative;
+                margin: 0px 30px 0px 30px;
+                position: sticky;
+                top:630px;
+               
+                
+            }
+            .fb a{
+                position: absolute;
+                top: 30px;
+                left: 95%;
+                width: 50px;
+                height: 50px;
+                border: 1px solid grey;
+                font-size: 30px;
+                text-align: center;
+                padding: 4px;
+                border-radius: 50px;
+                background-color: rgb(52, 52, 243);
+            }
+            .fb i{
+                color: white;
+            }
+
+            .dt{
+                position: relative;
+                margin: 0px 30px 0px 30px;
+                position: sticky;
+                top:570px;
+
+                
+            }
+            .dt a{
+                position: absolute;
+                top: 30px;
+                left: 95%;
+                width: 45px;
+                height: 45px;
+                border: 1px solid red;
+                font-size: 25px;
+                text-align: center;
+                padding: 4px;
+                border-radius: 50px;
+               background-color: red;
+            }
+            .dt i{
+                color: white;
+            }
+    }
+       
+        
+
+    </style>
+</head>
+<body>
+   
+   
+        
+    <div class="zl"> <a href=" https://zalo.me/0974008742"><img class="img-fluid" src="//bizweb.dktcdn.net/100/441/086/themes/861582/assets/addthis-zalo.svg?1653040215086" alt="Gọi ngay cho chúng tôi" width="44" height="44"></a></div>
+    
+    <div class="fb"><a href="https://www.facebook.com/vi.lee.18488"><i class="fab fa-facebook-f"></i></a></div>
+    <div class="dt" ><a href=" phone"> <i class="fa-solid fa-phone"></i> </a></div>
+ 
+   
+    <div class="container">
+       
+      
+        <div class="head">
+                <div class="topnav">
+                    <ul class="danhsach">
+                       
+                        <li class="logo"> <a href="trangchuchinh.html"> VTSTORE.com</a>  </li>
+                        <li class="dangnhap"> <a href="#"><i class="fas fa-shopping-cart"></i><span id="giohang"> Giỏ hàng </span></a></li>
+                        <li class="dangnhap"> <a href="login.html" > <i class="fa fa-user-tie fa-2x"></i> <span> Đăng nhập</span></a> </li>
+                        
+                       <li class="media d-lg-flex d-none hotline">
+                            <img src="//bizweb.dktcdn.net/100/441/086/themes/861582/assets/phone-icon.png?1653040215086" width="24" height="24" class="mr-3 align-self-center" alt="phone-icon">
+                    
+                            <div class="media-body d-md-flex flex-column d-none1 ">
+                                <span>Gọi mua hàng</span>
+                                <a class="font-weight-bold d-block" href="tel:0974008742" title="19006750">
+                                    19006789
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </ul>
+               
+                <div class="search-container">
+                    <form action="/action_page.php">
+                    <input type="text" placeholder="Tìm kiếm.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div> 
+                
+             
+         
+        </div>
+    </div>
+        <div class="left">
+            
+          
+             
+            </div>
+        <div class="left_ct">
+
+            <div class="container">
+                <div class="phone">
+                  <div class="content">
+                    <nav role="navigation">
+                      <div id="menuToggle">
+                       
+                        <input type="checkbox" /> 
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                  
+                      <ul id="menu">
+                        <li><i class="fa fa-gift"></i> &ensp;<a href="trangchuchinh.html">Tổng hợp khuyến mãi</a></li>
+                        <li><i class="fa fa-microchip"></i>&ensp;<a href="trangchuchinh.html">Linh kiện máy tính &emsp;  ></a></li>
+                        <li><i class="fa fa-desktop"></i>&ensp;<a href="trangchuchinh.html">Màn máy tính  &ensp;&ensp;&nbsp;&emsp;&emsp;></a></li>
+                        <li><i class="fa fa-laptop"></i>&ensp;<a href="trangchuchinh.html">Laptop & Macbook &ensp; ></a></li>
+                      </ul>
+                     </div>
+                    </nav>
+                  </div>
+                 </div>
+              </div>
+        </div>
+     
+        <div class="content">
+         
+           <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img style="width: 300px;height: 350px; " src="hinh/a1.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img style="background-image:100% 100% ;width: 300px;height: 350px;" src="hinh/a2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img style="background-image:100% 100% ;width: 300px;height: 350px;" src="hinh/a3.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+         
+        </div>
+        <div class="sanpham">
+
+            <div class="row mt-5">
+                <div class="giamgia">
+                <h3 class="list-product-title "><strong> Giảm sốc 50% </strong></h3>
+                <!-- group -->
+                <div class="product-group">
+                    <div class="row">
+                    <div class="col-md-3 col-sm-6 col-12">
+                        <div class="card card-product mb-3">
+                            <img  src="hinh/1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title product-title ">Laptop Gigabyte G5 i5 11400H/16GB/512GB/4GB</h5>
+                            <div class="card-text product-price">
+                                <span class="del-price">2.000 USD</span>
+                                <span class="new-price">1.000 USD</span>
+                            </div>
+                                <a href="" class="btn btn-info btn-add-to-cart"> <i class="fa fa-cart-shopping"></i></a>
+                                <a href="" class="btn btn-outline-info btn-detail">Xem chi tiết</a>
+                                <h3 class="Sale-sticky">Sale</h3>
+                           
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-md-3 col-sm-6 col-12">
+                        <div class="card card-product mb-3">
+                            <img  src="hinh/2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title product-title ">Laptop MSI GF63 Thin 9SCSR 076VN - Intel Core i5</h5>
+                            <div class="card-text product-price">
+                                <span class="del-price">3.000 USD</span>
+                                <span class="new-price">1.500 USD</span>
+                            </div>
+                                <a href="" class="btn btn-info btn-add-to-cart"> <i class="fa fa-cart-shopping"></i></a>
+                                <a href="" class="btn btn-outline-info btn-detail">Xem chi tiết</a>
+                                <h3 class="Sale-sticky">Sale</h3>
+                        
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-md-3 col-sm-6 col-12">
+                    <div class="card card-product mb-3">
+                        <img  src="hinh/3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title product-title ">Asus Zephyrus G15 NVIDIA GeForce GTX 1660 Ti 6GB GDDR 6</h5>
+                        <div class="card-text product-price">
+                            <span class="del-price">2.000 USD</span>
+                            <span class="new-price">1.000 USD</span>
+                        </div>
+                            <a href="" class="btn btn-info btn-add-to-cart"> <i class="fa fa-cart-shopping"></i></a>
+                            <a href="" class="btn btn-outline-info btn-detail">Xem chi tiết</a>
+                            <h3 class="Sale-sticky">Sale</h3>
+                    
+                    </div>
+                    </div>
+                </div>
+                    <div class="col-md-3 col-sm-6 col-12">
+                        <div class="card card-product mb-3">
+                            <img  src="hinh/4.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title product-title ">Laptop Acer Nitro 5 AN515-45-R86D (R7-5800H | 8GB)</h5>
+                            <div class="card-text product-price">
+                                <span class="del-price">4.000 USD</span>
+                                <span class="new-price">2.000 USD</span>
+                            </div>
+                                <a href="" class="btn btn-info btn-add-to-cart"> <i class="fa fa-cart-shopping"></i></a>
+                                <a href="" class="btn btn-outline-info btn-detail">Xem chi tiết</a>
+                                <h3 class="Sale-sticky">Sale</h3>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- group -->
+        
+            <h3 class="list-product-title "><strong> LAPTOP NỔI BẬT </strong></h3>
+
+        <div class="product-group">
+            <div class="row">
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="card card-product mb-3">
+                    <img  src="hinh/9.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title product-title ">Laptop Acer Predator Helios 500 PH517-52-797L </h5>
+                    <div class="card-text product-price">
+                        <span class="del-price">3.000 USD</span>
+                        <span class="new-price">2.800 USD</span>
+                    </div>
+                        <a href="" class="btn btn-info btn-add-to-cart"> <i class="fa fa-cart-shopping"></i></a>
+                        <a href="" class="btn btn-outline-info btn-detail">Xem chi tiết</a>
+                        <!-- <h3 class="Sale-sticky">Sale</h3> -->
+                   
+                </div>
+            </div>
+        </div>
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="card card-product mb-3">
+                    <img  src="hinh/10.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title product-title ">Laptop Asus Gaming TUF FX706HC-HX003T (i5 11400H/8GB)</h5>
+                    <div class="card-text product-price">
+                        <span class="del-price">2.300 USD</span>
+                        <span class="new-price">2.000 USD</span>
+                    </div>
+                        <a href="" class="btn btn-info btn-add-to-cart"> <i class="fa fa-cart-shopping"></i></a>
+                        <a href="" class="btn btn-outline-info btn-detail">Xem chi tiết</a>
+
+                
+                </div>
+            </div>
+        </div>
+            <div class="col-md-3 col-sm-6 col-12">
+            <div class="card card-product mb-3">
+                <img  src="hinh/11.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title product-title ">Laptop Lenovo Legion 5 15ACH6 82JU00DFVN (AMD R7-5800H)</h5>
+                <div class="card-text product-price">
+                    <span class="del-price">1.800 USD</span>
+                    <span class="new-price">1.600 USD</span>
+                </div>
+                    <a href="" class="btn btn-info btn-add-to-cart"> <i class="fa fa-cart-shopping"></i></a>
+                    <a href="" class="btn btn-outline-info btn-detail">Xem chi tiết</a>
+
+            
+            </div>
+            </div>
+        </div>
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="card card-product mb-3">
+                    <img  src="hinh/7.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title product-title ">Macbook Pro 13 Inch M1 2020: Khởi Đầu Của Sự Mới Mẻ</h5>
+                    <div class="card-text product-price">
+                        <span class="del-price">2.100 USD</span>
+                        <span class="new-price">1.800 USD</span>
+                    </div>
+                        <a href="" class="btn btn-info btn-add-to-cart"> <i class="fa fa-cart-shopping"></i></a>
+                        <a href="" class="btn btn-outline-info btn-detail">Xem chi tiết</a>
+
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+        <h3 class="list-product-title "><strong> Phụ kiện </strong></h3>
+        <div class="product-group">
+            <div class="row">
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="card card-product mb-3">
+                    <img  src="hinh/8.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title product-title ">Bàn phím cơ E-Dra EK387 </h5>
+                    <div class="card-text product-price">
+                        <span class="del-price">200 USD</span>
+                        <span class="new-price">110 USD</span>
+                    </div>
+                        <a href="" class="btn btn-info btn-add-to-cart"> <i class="fa fa-cart-shopping"></i></a>
+                        <a href="" class="btn btn-outline-info btn-detail">Xem chi tiết</a>
+                        <!-- <h3 class="Sale-sticky">Sale</h3> -->
+                   
+                </div>
+            </div>
+        </div>
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="card card-product mb-3">
+                    <img  src="hinh/6.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title product-title ">Combo chuột, phím của Dareu</h5>
+                    <div class="card-text product-price">
+                        <span class="del-price">300 USD</span>
+                        <span class="new-price">200 USD</span>
+                    </div>
+                        <a href="" class="btn btn-info btn-add-to-cart"> <i class="fa fa-cart-shopping"></i></a>
+                        <a href="" class="btn btn-outline-info btn-detail">Xem chi tiết</a>
+
+                
+                </div>
+            </div>
+        </div>
+            <div class="col-md-3 col-sm-6 col-12">
+            <div class="card card-product mb-3">
+                <img  src="hinh/12.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title product-title ">Chuột Logitech G402 Hyperion Fury Đen</h5>
+                <div class="card-text product-price">
+                    <span class="del-price">100 USD</span>
+                    <span class="new-price">60 USD</span>
+                </div>
+                    <a href="" class="btn btn-info btn-add-to-cart"> <i class="fa fa-cart-shopping"></i></a>
+                    <a href="" class="btn btn-outline-info btn-detail">Xem chi tiết</a>
+
+            
+            </div>
+            </div>
+        </div>
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="card card-product mb-3">
+                    <img  src="hinh/13.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title product-title ">Bàn Phím Cơ Mini Gaming Ziyoulang T60</h5>
+                    <div class="card-text product-price">
+                        <span class="del-price">100 USD</span>
+                        <span class="new-price">80 USD</span>
+                    </div>
+                        <a href="" class="btn btn-info btn-add-to-cart"> <i class="fa fa-cart-shopping"></i></a>
+                        <a href="" class="btn btn-outline-info btn-detail">Xem chi tiết</a>
+
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="right">
+  <div id="link">
+ 
+    </div>
+  
+</div>
+        
+<div class="footer">
+    <div class="info" > 
+      
+      <a href="">  <i class="fa-solid fa-phone"></i></a>
+      <a href="https://www.facebook.com/messages/t/100007465302816/">  <i class="fa-brands fa-facebook-messenger"></i> </a>
+      <a href="https://www.instagram.com/niinh.lee/">  <i class="fa-brands fa-instagram"></i> </a>
+      <i class="lienhe"> Liên hệ chúng tôi để nhận thêm nhiều khuyến mãi đặc biệt.</i>
+
+    </div>
+    <div class="ft">
+        <div class="ten"><a href="trangchuchinh.html"> VTSTORE.com</a></div>
+        <div><b> Địa chỉ:</b> 1a Đỗ Nhuận - Sơn Kỳ - Q. Tân Phú, Tp.HCM</div>
+        <div><b> Số điện thoại:</b> 0974008742</div>
+        <div><b> Email:</b><a href="https://mail.google.com/mail/u/1/?ogbl#inbox"> levi34202@gmail.com </a></div>
+         <div><a href=""> Giới thiệu về nhóm </a></div>
+    </div>
+</div>
+  
+
+
+</body>
+</html>
